@@ -9,7 +9,6 @@ mouseEventsButton.addEventListener("mouseleave", () => {
 });
 
 var inputKeyboardEvents = document.getElementById("input-keyboard-events");
-
 inputKeyboardEvents.addEventListener("keydown", (e) => {
     var keyEventsText = document.getElementById("keyboard-events-message");
     keyEventsText.innerHTML = `Key pressed: ${e.key}`;
@@ -21,3 +20,14 @@ formEvents.addEventListener("submit", (e) => {
     e.preventDefault();
     formEventsText.innerHTML = "The form was submitted successfully!"
 });
+
+var inputFocusBlurEvents = document.getElementById("input-focus-blur-events");
+var focusBlurText = document.getElementById("focus-blur-events-message");
+inputFocusBlurEvents.addEventListener("focus", () => {
+    focusBlurText.innerHTML = "Input is focussed"
+});
+
+inputFocusBlurEvents.addEventListener("blur", () => {
+    focusBlurText.innerHTML = "Input lost focus";
+});
+
