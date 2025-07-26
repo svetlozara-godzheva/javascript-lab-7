@@ -31,3 +31,8 @@ inputFocusBlurEvents.addEventListener("blur", () => {
     focusBlurText.innerHTML = "Input lost focus";
 });
 
+var eventDelegationContainer = document.getElementById("event-delegation-container");
+eventDelegationContainer.addEventListener("click", (e) => {
+    var eventDelegationText = document.getElementById("event-delegation-text");
+    eventDelegationText.innerHTML = `Target content: ${e.target.innerHTML}`;
+});
